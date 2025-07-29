@@ -1,0 +1,7 @@
+:host {
+  display: block;
+}
+
+.form-text {
+  color: rgba(var(--bs-danger-rgb));
+}

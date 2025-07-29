@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card-body">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="number" class="form-label">Número</label>
+        <input
+          formControlName="number"
+          [ngClass]="{'border border-3 border-danger' : form.get('number')?.errors ?? false}"
+          type="number"
+          name="number"
+          id="number"
+          class="form-control"
+        />
+        @if (form.get('number')?.errors) {
+        <div id="numberHelp" class="form-text">
+          El valor debe de ser un número natural.
+        </div>
+        }
+      </div>
+      <button class="btn btn-primary">Calcular</button>
+    </form>
+  </div>
+</div>
